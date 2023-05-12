@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbeepberry=self.webpackChunkbeepberry||[]).push([[340],{1450:e=>{e.exports=JSON.parse('{"title":"Software","slug":"/category/software","permalink":"/docs/category/software","navigation":{"previous":{"title":"Getting Started","permalink":"/docs/getting-started"},"next":{"title":"OS Image","permalink":"/docs/software/os-image"}}}')}}]);

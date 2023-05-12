@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbeepberry=self.webpackChunkbeepberry||[]).push([[828],{3499:e=>{e.exports=JSON.parse('{"title":"Firmware","slug":"/category/firmware","permalink":"/docs/category/firmware","navigation":{"previous":{"title":"Linux Drivers","permalink":"/docs/software/linux-drivers"},"next":{"title":"Keyboard Firmware","permalink":"/docs/firmware/keyboard"}}}')}}]);
