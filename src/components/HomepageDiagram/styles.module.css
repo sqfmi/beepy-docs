@@ -7,3 +7,12 @@
     width:100%;
     padding:2em;
 }
+
+@media screen and (max-width: 996px) {
+    .diagram{
+        padding:0rem;
+    }
+    .diagram img{
+        padding:0rem;
+    }
+}

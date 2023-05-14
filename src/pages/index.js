@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import HomepageDiagram from '@site/src/components/HomepageDiagram';
+import HomepageVideos from '@site/src/components/HomepageVideos';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -17,7 +18,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="https://beepberry.sqfmi.com">
+            to="https://shop.sqfmi.com/products/beepberry">
             Order Now
           </Link>
         </div>
@@ -30,12 +31,13 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} by SQFMI x Beeper`}
+      description="Beepberry by SQFMI x Beeper">
       <HomepageHeader />
       <main>
         <HomepageDiagram />
         <HomepageFeatures />
+        <HomepageVideos />
       </main>
     </Layout>
   );

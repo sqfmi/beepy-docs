@@ -32,3 +32,7 @@
 [data-theme='dark'] .img-svg {
   filter: invert(100%);
 }
+
+[data-theme='dark'] img[alt="Beepberry Technical Diagram"] {
+  filter: invert(100%);
+}

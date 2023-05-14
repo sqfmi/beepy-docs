@@ -24,7 +24,7 @@ const FeatureList = [
   },
   {
     title: 'Powered by Raspberry Pi',
-    Svg: require('@site/static/img/Raspberry_Pi_Logo.svg').default,
+    Svg: require('@site/static/img/feature-raspberrypizero.svg').default,
     description: (
       <>
         Powered by the Pi Zero W (optional) or any other compatible SBCs (e.g. Radxa Zero, MQ-Pro) with the low profile solderless header.
