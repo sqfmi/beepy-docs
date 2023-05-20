@@ -15,3 +15,7 @@ Powered by the Raspberry Pi Zero W (or any other compatible SBCs), you can use i
 Beeper is a universal chat app. It’s a single app to chat with friends on 15 different chat networks.
 
 Learn more at https://www.beeper.com
+
+### Does it have LTE/4G/5G/LoRA/Zigbee/GPS/etc. connectivity?
+
+Additional connectivity can be expanded via USB or GPIO ports.

@@ -36,3 +36,16 @@
 [data-theme='dark'] img[alt="Beepberry Technical Diagram"] {
   filter: invert(100%);
 }
+
+@font-face {
+  font-family: 'Nimbus Sans L';
+  src: url('/static/fonts/NimbusSanL-BolIta.woff2') format('woff2'),
+      url('/static/fonts/NimbusSanL-BolIta.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.hero h1{
+  font-family: 'Nimbus Sans L';
+}

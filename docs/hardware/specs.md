@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Tech Specs
 
-![Beepberry Technical Diagram](/img/beepberry-diagram.svg)
+![Beepberry Technical Diagram](/img/beepberry-diagram-full.svg)
 
 - Ultra-low power high contrast Sharp Memory LCD 2.7″ 400 x 200
 - Raspberry Pi Zero W (optional) with compatible low profile solderless header

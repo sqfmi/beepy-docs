@@ -4,7 +4,9 @@ sidebar_position: 2
 
 # Pinouts
 
-## Raspberry Pi Breakouts
+## Raspberry Pi Header Breakout
+
+<img src="/img/beeper-header-breakout.svg" width="100%"/>
 
 ## RGB LED
 

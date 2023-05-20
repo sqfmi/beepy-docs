@@ -3,16 +3,31 @@
     padding:1em;
 }
 
-.diagram img{
+.diagram h1{
+    padding-bottom: 1em;
+}
+
+.diagram .front{
+    background-image: url("/static/img/beepberry-diagram-full.svg");
+    background-repeat: no-repeat;
+    background-size: contain;    
     width:100%;
-    padding:2em;
+    height:600px;
 }
 
 @media screen and (max-width: 996px) {
-    .diagram{
-        padding:0rem;
+    .diagram .front{
+        background-repeat: no-repeat;
+        background-size: 180%;
+        width: 100%;
+        height: 300px;        
     }
-    .diagram img{
-        padding:0rem;
-    }
+    .diagram .back{
+        background-image: url("/static/img/beepberry-diagram-full.svg");
+        background-repeat: no-repeat;
+        background-size: 180%;
+        background-position: right;
+        width: 100%;
+        height: 360px;        
+    }    
 }

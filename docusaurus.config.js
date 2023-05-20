@@ -109,7 +109,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/beepberry',
+                href: 'https://discord.gg/QERrSferdF',
               },
               {
                 label: 'Twitter',
@@ -130,7 +130,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://sqfmi.com',
+                href: 'https://github.com/beeper/beepberry',
               },
               {
                 label: 'Beeper',

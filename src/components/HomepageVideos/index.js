@@ -26,8 +26,11 @@ export default function HomepageVideos() {
             <img src={useBaseUrl('/img/beepberry-edc.jpg')} />
           </div>
           <div className={clsx('col col--4', styles.col)}>
-            <img src={useBaseUrl('/img/beepberry_fruitforscale-2048x1443.png')} />
-          </div>          
+            <img src={useBaseUrl('/img/beepberry-fruitforscale-2048x1443.png')} />
+          </div>
+          <div className={clsx('col col--4', styles.col)}>
+            <img src={useBaseUrl('/img/beepberry-tuir-reddit.png')} />
+          </div>            
         </div>
       </div>
     </section>
