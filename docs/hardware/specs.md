@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ![Beepberry Technical Diagram](/img/beepberry-diagram-full.svg)
 
-- Ultra-low power high contrast Sharp Memory LCD 2.7″ 400 x 200
+- Ultra-low power high contrast Sharp Memory LCD 2.7″ 400 x 240
 - Raspberry Pi Zero W (optional) with compatible low profile solderless header
 - Tactile keyboard w/ backlight and touchpad
 - Programmable RGB LED for notifications
