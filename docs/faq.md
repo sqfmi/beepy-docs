@@ -19,3 +19,7 @@ Learn more at https://www.beeper.com
 ### Does it have LTE/4G/5G/LoRA/Zigbee/GPS/etc. connectivity?
 
 Additional connectivity can be expanded via USB or GPIO ports.
+
+### Does Beepberry come with a case?
+
+No, but you can [3D print your own case](/docs/3D). We'll be offering a CNC case and a plastic case soon. The Beepberry can also be used as is (with the addition of a rubber band).
