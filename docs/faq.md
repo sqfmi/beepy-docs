@@ -23,3 +23,7 @@ Additional connectivity can be expanded via USB or GPIO ports.
 ### Does Beepberry come with a case?
 
 No, but you can [3D print your own case](/docs/3D). We'll be offering a CNC case and a plastic case soon. The Beepberry can also be used as is (with the addition of a rubber band).
+
+### My Beepberry LED is always on
+
+You may be running an older version of the firmware, follow these instructions to [**update the firmware**](/docs/getting-started#firmware-update).
