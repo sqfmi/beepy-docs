@@ -32,7 +32,7 @@ You may be running an older version of the firmware, follow these instructions t
 
 First, make sure the battery is charged by plugging in the USB C port and flipping the power switch. Then you need to follow the instructions to [flash an SD card with the OS](/docs/getting-started).
 
-### Help, the screen is very striking static pattern, even after I've flashed the SD card
+### Help, the screen is stuck displaying a very striking static pattern, even after I've flashed the SD card
 
 You need to run the install script before the screen can display anything.
 
