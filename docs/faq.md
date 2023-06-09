@@ -27,3 +27,19 @@ No, but you can [3D print your own case](/docs/3D). We'll be offering a CNC case
 ### My Beepberry LED is always on
 
 You may be running an older version of the firmware, follow these instructions to [**update the firmware**](/docs/getting-started#firmware-update).
+
+### I just opened the box and have no idea what to do
+
+First, make sure the battery is charged by plugging in the USB C port and flipping the power switch. Then you need to follow the instructions to [flash an SD card with the OS](/docs/getting-started).
+
+### Help, the screen is very striking static pattern, even after I've flashed the SD card
+
+You need to run the install script before the screen can display anything.
+
+### I set my wifi SSID and password in the pi imager but it can't seem to connect
+
+The pi zero w only supports 2.4ghz wifi networks. Make sure you're not trying to connect to a 5ghz network.
+
+### I prefer a white background with black text
+
+You can invert the display mode by running `echo -e '\033[?5h' > /dev/tty1`. You can append this line to your .bashrc to set it as the default. 
