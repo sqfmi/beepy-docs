@@ -11,6 +11,11 @@ The base OS image is [Raspberry Pi OS Lite 32-bit](https://downloads.raspberrypi
 To Do - Optimized boot script to reduce boot up time
 
 ## Optimizing Battery Life
+### Pi Zero 2W Settings
+**Restrict munber of cores to limit peak power use** - the Zero 2W can be limitid to use two cores and is still much faster tnah the pi zero, but peak power use is nearly half of what 4 cores will use.
+* sudo vi /boot/cmdline.txt
+* Add "maxcpus=2" after "console=tty1".
+* Reboot
 
 ## Optimizing Apps for small screens
 **top** - You can reduce the number of columns shown by default so that it shows more useful information on the sharp display.  
