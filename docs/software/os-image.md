@@ -9,3 +9,16 @@ The base OS image is [Raspberry Pi OS Lite 32-bit](https://downloads.raspberrypi
 ## Optimizing Boot Speed
 
 To Do - Optimized boot script to reduce boot up time
+
+## Optimizing Battery Life
+
+## Optimizing Apps for small screens
+**top** - You can reduce the number of columns shown by default so that it shows more useful information on the sharp display.  
+* ssh to the beepberry (the needed menu doesn't render correctly on the small screen)
+* run "top"
+* type "f" to enter the columns config screen
+* use the up and down keys to move, and space to remove the "\*" from all of the columns except: PID, USER, S, %CPU, %MEM, COMMAND
+* type "q" to return to the main screen
+* type "W" (capital w) to save the config.
+* type "q" to quit.  Then go back to the beepberry and top should have a nice setup.
+
