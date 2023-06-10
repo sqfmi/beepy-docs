@@ -31,6 +31,9 @@ If you are installing your own Raspberry Pi Zero W or any other SBC, make sure a
 
 <img alt="Beepberry Raspberry Pi Zero mounting diagram" src='/img/beepberry-header-mount-diagram.jpg' width='600' />
 
+
+The USB-C port at the bottom powers and charges the Beepberry. **Do not power the Raspberry Pi Zero through its Micro-USB port (PWR IN).**
+
 ## Firmware Update
 
 To update the Beepberry's firmware:

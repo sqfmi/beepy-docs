@@ -22,7 +22,7 @@ Additional connectivity can be expanded via USB or GPIO ports.
 
 ### Does Beepberry come with a case?
 
-No, but you can [3D print your own case](/docs/3D). We'll be offering a CNC case and a plastic case soon. The Beepberry can also be used as is (with the addition of a rubber band).
+No, but you can [3D print your own case](/docs/3D). We'll be offering a case soon. The Beepberry can also be used as is (with the addition of a rubber band).
 
 ### My Beepberry LED is always on
 
@@ -30,15 +30,15 @@ You may be running an older version of the firmware, follow these instructions t
 
 ### I just opened the box and have no idea what to do
 
-First, make sure the battery is charged by plugging in the USB C port and flipping the power switch. Then you need to follow the instructions to [flash an SD card with the OS](/docs/getting-started).
+First you need to follow the instructions to [flash an SD card with the OS](/docs/getting-started), then make sure the battery is charged by plugging in the USB C port and flipping the power switch. 
 
 ### Help, the screen is stuck displaying a very striking static pattern, even after I've flashed the SD card
 
-You need to run the install script before the screen can display anything.
+Follow the [Getting Started](/docs/getting-started#software-setup) guide and run the install script before the screen can display anything.
 
-### I set my wifi SSID and password in the pi imager but it can't seem to connect
+### I set my WiFi SSID and password in the Pi imager but it can't seem to connect
 
-The pi zero w only supports 2.4ghz wifi networks. Make sure you're not trying to connect to a 5ghz network.
+The Pi Zero W only supports 2.4GHz WiFi networks. Make sure you're not trying to connect to a 5GHz network.
 
 ### I prefer a white background with black text
 
