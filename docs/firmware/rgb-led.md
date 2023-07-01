@@ -4,34 +4,34 @@ sidebar_position: 3
 
 # RGB LED
 
-The RGB LED is connected to the RP2040, and can be controlled by the Pi via i2c by writing to specific registers.
+The RGB LED is connected to the RP2040 and can be controlled by the Pi via [I²C](https://en.wikipedia.org/wiki/I²C).
 
-## Examples
+The LED color on the Beepberry is exposed on I2C bus 1 at the chip address `0x1F`.
 
-### Set RGB color
+Controls are available at the following specific data addresses:
 
-To get/set the LED color on the Beepberry, you can read/write to the following registers over I2C. The values can be 0x00 - 0xFF.
+| Function | Read   | Write  |
+|----------|--------|--------|
+| Power    | `0x20` | `0xA0` |
+| Red      | `0x21` | `0xA1` |
+| Green    | `0x22` | `0xA2` |
+| Blue     | `0x23` | `0xA3` |
 
-```
-REG_LED_R = 0x21
-REG_LED_G = 0x22
-REG_LED_B = 0x23
-```
+*Note: write addresses are the read address masked with 0x80.*
 
-**Note: When writing to the registers, mask address with 0x80 e.g. to read use address 0x21, to write use address 0xA1**
+Valid RGB values are on the range `0x00` to `0xFF`.
 
-To turn the LED on/off, you can write to the register `0x20`. A value of 0 turns the LED off, while any other value turns it on.
+A value of 0 in the power register represents the LED's off state, while any other value represents on.
 
-#### Command-line Example
-First release the I2C bus from the keyboard driver, then set the RGB values to red and turn the LED on.
+## Example
+
+To set the RGB values to red and turn the LED on from the command line:
+
 ```bash
-sudo modprobe -r bbqX0kbd
-sudo i2cset -y 1 0x1F 0xA1 0xFF
-sudo i2cset -y 1 0x1F 0xA2 0x00
-sudo i2cset -y 1 0x1F 0xA3 0x00
-sudo i2cset -y 1 0x1F 0xA0 0xFF
+# Format:
+# i2cset -y [i2cbus] [chip-address] [data-address] value
+i2cset -y 1 0x1F 0xA1 0xFF
+i2cset -y 1 0x1F 0xA2 0x00
+i2cset -y 1 0x1F 0xA3 0x00
+i2cset -y 1 0x1F 0xA0 0xFF
 ```
-
-### Blink on trigger
-
-To Do
