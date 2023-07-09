@@ -4,11 +4,11 @@ sidebar_position: 3
 
 # Schematic
 
-[beepberry-schematic-v1.pdf](https://github.com/sqfmi/beepberry-hardware/blob/main/KiCad/beepberry-schematic-v1.pdf)
+[beepy-schematic-v1.pdf](https://github.com/sqfmi/beepy-hardware/blob/main/KiCad/beepy-schematic-v1.pdf)
 
 ## KiCad
 
-The KiCad files can be found on [GitHub](https://github.com/sqfmi/beepberry-hardware).
+The KiCad files can be found on [GitHub](https://github.com/sqfmi/beepy-hardware).
 
 ## Keyboard
 

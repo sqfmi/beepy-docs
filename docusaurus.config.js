@@ -6,12 +6,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Beepberry',
+  title: 'Beepy',
   tagline: 'the ultimate everyday computing gadget',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://beepberry.sqfmi.com',
+  url: 'https://beepy.sqfmi.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -19,7 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'sqfmi', // Usually your GitHub org/user name.
-  projectName: 'beepberry-docs', // Usually your repo name.
+  projectName: 'beepy-docs', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -43,7 +43,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/sqfmi/beepberry-docs/blob/main',
+            'https://github.com/sqfmi/beepy-docs/blob/main',
         },
         blog: false,
         theme: {
@@ -61,9 +61,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/beepberry-social-card.jpg',
+      image: 'img/beepy-social-card.jpg',
       navbar: {
-        title: 'Beepberry',
+        title: 'Beepy',
         logo: {
           alt: 'SQFMI logo',
           src: 'img/sqfmi_logo_32x32.svg',
@@ -82,8 +82,8 @@ const config = {
             position: 'left',
           },
           {
-            to: 'https://shop.sqfmi.com/products/beepberry',
-            label: 'Buy Beepberry!',
+            to: 'https://forms.gle/Q3NCLSjDZwcURxrs8',
+            label: 'Buy Beepy!',
             position: 'right',
           },
         ],
@@ -130,7 +130,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/beeper/beepberry',
+                href: 'https://github.com/beeper/',
               },
               {
                 label: 'Beeper',

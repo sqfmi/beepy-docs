@@ -16,6 +16,8 @@ Controls are available at the following specific data addresses:
 | Red      | `0x21` | `0xA1` |
 | Green    | `0x22` | `0xA2` |
 | Blue     | `0x23` | `0xA3` |
+=======
+To get/set the LED color on the Beepy, you can read/write to the following registers over I2C. The values can be 0x00 - 0xFF.
 
 *Note: write addresses are the read address masked with 0x80.*
 

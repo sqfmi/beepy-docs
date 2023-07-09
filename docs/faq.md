@@ -4,9 +4,9 @@ sidebar_position: 6
 
 # FAQ
 
-### What's a Beepberry?
+### What's a Beepy?
 
-Beepberry is a portable computing device, with a beautiful high contrast, high resolution display, and a tactile keyboard + touchpad, it is the ultimate everyday hacking gadget.
+Beepy is a portable computing device, with a beautiful high contrast, high resolution display, and a tactile keyboard + touchpad, it is the ultimate everyday hacking gadget.
 
 Powered by the Raspberry Pi Zero W (or any other compatible SBCs), you can use it as a chat device (supporting all chat networks on Beeper e.g. iMessage/WhatsApp/Signal/etc. ), or use it as a hackable handheld cyberdeck, running any Linux application that runs on the Pi.
 
@@ -20,11 +20,11 @@ Learn more at https://www.beeper.com
 
 Additional connectivity can be expanded via USB or GPIO ports.
 
-### Does Beepberry come with a case?
+### Does Beepy come with a case?
 
-No, but you can [3D print your own case](/docs/3D). We'll be offering a case soon. The Beepberry can also be used as is (with the addition of a rubber band).
+No, but you can [3D print your own case](/docs/3D). We'll be offering a case soon. Beepy can also be used as is (with the addition of a rubber band).
 
-### My Beepberry LED is always on
+### My Beepy LED is always on
 
 You may be running an older version of the firmware, follow these instructions to [**update the firmware**](/docs/getting-started#firmware-update).
 
