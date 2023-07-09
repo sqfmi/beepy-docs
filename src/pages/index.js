@@ -18,7 +18,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="https://shop.sqfmi.com/products/beepberry">
+            to="https://forms.gle/Q3NCLSjDZwcURxrs8">
             Order Now
           </Link>
         </div>
@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title} by SQFMI x Beeper`}
-      description="Beepberry by SQFMI x Beeper">
+      description="Beepy by SQFMI x Beeper">
       <HomepageHeader />
       <main>
         <HomepageDiagram />

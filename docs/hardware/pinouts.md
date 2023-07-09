@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Raspberry Pi Header Breakout
 
-<img src="/img/beeper-header-breakout.svg" width="100%"/>
+<img src="/img/beepy-header-breakout.svg" width="100%"/>
 
 ## RGB LED
 

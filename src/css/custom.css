@@ -33,7 +33,7 @@
   filter: invert(100%);
 }
 
-[data-theme='dark'] img[alt="Beepberry Technical Diagram"] {
+[data-theme='dark'] img[alt="Beepy Technical Diagram"] {
   filter: invert(100%);
 }
 

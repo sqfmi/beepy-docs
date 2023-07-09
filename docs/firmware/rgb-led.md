@@ -10,7 +10,7 @@ The RGB LED is connected to the RP2040, and can be controlled by the Pi via i2c 
 
 ### Set RGB color
 
-To get/set the LED color on the Beepberry, you can read/write to the following registers over I2C. The values can be 0x00 - 0xFF.
+To get/set the LED color on the Beepy, you can read/write to the following registers over I2C. The values can be 0x00 - 0xFF.
 
 ```
 REG_LED_R = 0x21

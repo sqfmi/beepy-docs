@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Linux Drivers
 
-Linux drivers for the Beepberry
+Linux drivers for the Beepy
 
 ## Display
 
@@ -20,7 +20,7 @@ To Do
 
 ## Peripherals
 
-To Do - This driver provides an interface to read/write to the peripherals on the Beepberry
+To Do - This driver provides an interface to read/write to the peripherals on the Beepy
 
 ### Power Control
 

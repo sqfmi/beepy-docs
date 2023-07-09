@@ -8,7 +8,7 @@
 }
 
 .diagram .front{
-    background-image: url("/static/img/beepberry-diagram-full.svg");
+    background-image: url("/static/img/beepy-diagram-full.svg");
     background-repeat: no-repeat;
     background-size: contain;    
     width:100%;
@@ -23,7 +23,7 @@
         height: 300px;        
     }
     .diagram .back{
-        background-image: url("/static/img/beepberry-diagram-full.svg");
+        background-image: url("/static/img/beepy-diagram-full.svg");
         background-repeat: no-repeat;
         background-size: 180%;
         background-position: right;
