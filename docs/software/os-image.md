@@ -12,7 +12,7 @@ To Do - Optimized boot script to reduce boot up time
 
 ## Optimizing Battery Life
 ### Pi Zero 2W Settings
-**Restrict munber of cores to limit peak power use** - the Zero 2W can be limitid to use two cores and is still much faster tnah the pi zero, but peak power use is nearly half of what 4 cores will use.
+**Restrict number of cores to limit peak power use** - the Zero 2W can be limited to use two cores and is still much faster than the pi zero, but peak power use is nearly half of what 4 cores will use.
 * sudo vi /boot/cmdline.txt
 * Add "maxcpus=2" after "console=tty1".
 * Reboot
