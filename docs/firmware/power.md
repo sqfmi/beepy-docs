@@ -26,14 +26,20 @@ sudo i2cget -y 1 0x1F 0x17 w
 ## Script
 Script to calculate the battery voltage
 ```
-#!/bin/sh
+#!/bin/bash
 
 sudo modprobe -r bbqX0kbd
-V=$(i2cget -y 1 0x1F 0x17 w | sed s/0x// | tr '[:lower:]' '[:upper:]')
+hex=$(i2cget -y 1 0x1F 0x17 w)
 sudo modprobe bbqX0kbd
 
-V=$(echo "obase=10; ibase=16; $V" | bc)
-echo "$V * 3.3 * 2 / 4095" | bc -l | cut -c1-5
+Raw=$((16#${hex:2}))
+Volts=$((Raw * 3300 * 2 / 4095))
+Perc=$((Volts/10-320))
+printf "%.2fv (%d%%)\n" $((Volts))e-3 $Perc
+```
+To adjust the reading higher by 5% (or more/less if needed, by changing 210 to another number), replace Volts line with:
+```
+Volts=$((Raw * 33 * 210 / 4095)) # Equivalent to Raw * 3300 * 2.1 / 4095
 ```
 
 ### Sleep/Wake
