@@ -18,6 +18,8 @@ To Do - Optimized boot script to reduce boot up time
 * Reboot
 
 ## Optimizing Apps for small screens
+* By default, the LCD display shows a character screen of 50x15. If you develop text-based apps for Beepy, targeting this format will give you compatibility with the widest userbase.
+  
 **top** - You can reduce the number of columns shown by default so that it shows more useful information on the sharp display.  
 * ssh to the Beepy (the needed menu doesn't render correctly on the small screen)
 * run "top"
