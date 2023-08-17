@@ -6,7 +6,7 @@ sidebar_position: 3
 
 The RGB LED is connected to the RP2040 and can be controlled by the Pi via [I²C](https://en.wikipedia.org/wiki/I²C).
 
-The LED color on the Beepberry is exposed on I2C bus 1 at the chip address `0x1F`.
+The LED color on the Beepy is exposed on I2C bus 1 at the chip address `0x1F`.
 
 Controls are available at the following specific data addresses:
 

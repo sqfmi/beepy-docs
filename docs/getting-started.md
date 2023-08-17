@@ -20,7 +20,7 @@ sudo shutdown -r now
 
 3. After reboot, SSH into the Pi again and run the setup script
 ```
-curl -s https://raw.githubusercontent.com/beeper/beepberry/main/raspberrypi/setup.sh | bash
+curl -s https://raw.githubusercontent.com/beeper/beepy/main/raspberrypi/setup.sh | bash
 ```
 
 4. Your Beepy is now ready, enjoy!
