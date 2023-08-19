@@ -6,7 +6,7 @@ sidebar_position: 1
 
 The keyboard firmware is a fork of [i2c_puppet](https://github.com/solderparty/i2c_puppet) with a few additional features to support the Beepy.
 
-You can download the latest version of the Beepy firmware here: https://github.com/sqfmi/i2c_puppet/raw/main/i2c_puppet.uf2
+You can download the latest version of the Beepy firmware here: https://github.com/sqfmi/i2c_puppet/releases/latest/download/i2c_puppet.uf2
 
 ## Custom Keymap
 

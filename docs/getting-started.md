@@ -43,7 +43,7 @@ To update the Beepy's firmware:
 3. While holding the "End Call" key (top right on the keypad), slide the power switch on
 4. The Beepy will present itself as a USB mass storage device, drag'n'drop the new firmware (\*.uf2) into the drive and it will reboot with the new firmware
 
-The latest Beepy firmware can be found here: [**i2c_puppet.uf2**](https://github.com/sqfmi/i2c_puppet/raw/main/i2c_puppet.uf2)
+The latest Beepy firmware can be found here: [**i2c_puppet.uf2**](https://github.com/sqfmi/i2c_puppet/releases/latest/download/f2)
 
 ## Additional Details
 - In ```/boot/cmdline.txt```, edit ```fbcon=font:VGA8x8``` to change the font/size. See [fbcon](https://www.kernel.org/doc/Documentation/fb/fbcon.txt) for more details
