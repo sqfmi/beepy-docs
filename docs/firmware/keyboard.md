@@ -12,12 +12,12 @@ You can download the latest version of the Beepy firmware here: https://github.c
 
 - Call is mapped to Control
 - "Berry" key is mapped to Tmux prefix (customize the prefix in the keymap file)
-    Touchpad click enters Meta mode (more on this later). Double click enters touchpad scroll mode
-    Back is mapped to Escape
-    Holding End Call runs the power-off routine on the RP2040, but does not send an actual key to Linux
-    Physical Alt is mapped to symbols via the keymap file
-    Symbol is mapped to AltGr (Right Alt), mapped to more symbols via the keymap file
-    Physical Alt + Enter is mapped to Tab
+- Touchpad click enters Meta mode (see the section on Meta mode). Double click enters touchpad scroll mode
+- Back is mapped to Escape
+- Holding "End Call" safely shuts down the Pi
+- Physical Alt is mapped to symbols printed on the keycap
+- Symbol is mapped to AltGr (Right Alt), mapped to more symbols via the keymap file
+- Physical Alt + Enter is mapped to Tab
 
 ## Alt and Sym modifiers
 
@@ -46,7 +46,7 @@ Meta mode is a modal layer that assists in rapidly moving the cursor and scrolli
 - T: Tab (dismisses Meta mode)
 - X: Apply Control to next key (dismisses Meta mode)
 - C: Apply Alt to next key (dismisses Meta mode)
-- 0: Toggle display color inversion
+- 0: Toggle display black/white inversion
 - N: Decrease keyboard brightness
 - M: Increase keyboard brightness
 - $: Toggle keyboard backlight
