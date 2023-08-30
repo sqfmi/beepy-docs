@@ -19,7 +19,7 @@ It returns a 16 bit value from the ADC (VREF = 3.3V). On the Beepy there is a vo
 #### Command-line Example
 First release the I2C bus from the keyboard driver, then read 1 word (2 bytes) from I2C bus 1, address 0x1F, register 0x17
 ```bash
-sudo modprobe -r bbqX0kbd
+sudo modprobe -r beepy_kbd
 sudo i2cget -y 1 0x1F 0x17 w
 ```
 
@@ -28,9 +28,9 @@ Script to calculate the battery voltage
 ```
 #!/bin/sh
 
-sudo modprobe -r bbqX0kbd
+sudo modprobe -r beepy_kbd
 V=$(i2cget -y 1 0x1F 0x17 w | sed s/0x// | tr '[:lower:]' '[:upper:]')
-sudo modprobe bbqX0kbd
+sudo modprobe beepy_kbd
 
 V=$(echo "obase=10; ibase=16; $V" | bc)
 echo "$V * 3.3 * 2 / 4095" | bc -l | cut -c1-5
