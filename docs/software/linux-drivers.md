@@ -28,8 +28,8 @@ To Do - Controlling the power switch and detecting the shutdown signal
 
 ### Battery Level
 
-To Do - Reading from the ADC on the RP2040
+To read battery level in userspace, see [Power Management & Battery](../firmware/power.md).
 
 ### RGB LED Control
 
-To Do - LED control via userspace application
+To control the front RGB LED in userspace, see [RGB LED](../firmware/rgb-led.md).
