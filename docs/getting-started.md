@@ -37,6 +37,7 @@ Buildroot is automatically set up with Beepy device drivers and a set of useful 
 * `mosh` - Mobile remote shell
 * `w3m` - Text based browser
 * `aerc` - Command line email client
+* `nmtui` - Network configuration
 * Python 3
 
 To use the Beepy Buildroot image, download and flash the latest release here:
@@ -44,6 +45,8 @@ To use the Beepy Buildroot image, download and flash the latest release here:
 https://github.com/ardangelo/beepberry-buildroot/releases
 
 To configure a Wi-Fi network, open the boot partition on your PC and rename the file `wlan/ssid_goes_here.psk` to `wlan/<your_network_name>.psk` and edit its contents, replacing `passphrase_goes_here` with the network passphrase.
+
+The file `timezone.txt` on the boot partition can be edited to change the device timezone. When a network is connected, time will automatically synchronize with time servers.
 
 The initial boot will take about 30 seconds to resize disk partitions to fill your SD card. Subsequent boots take around 8 seconds from power-on to Tmux.
 
