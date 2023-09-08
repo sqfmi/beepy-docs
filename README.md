@@ -1,4 +1,11 @@
-# Website
+# Technical documentation for SQFMI Beepy
+
+Documentation site for the SQFMI Beepy. Beepy is a portable computing device,
+with a high contrast, high resolution display, and a tactile keyboard +
+touchpad powered by Raspberry Pi Zero W (or any other compatible SBC).
+
+To see the live version of this documentation visit
+[beepy.sqfmi.com/docs/getting-started](https://beepy.sqfmi.com/docs/getting-started).
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
