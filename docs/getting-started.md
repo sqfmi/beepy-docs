@@ -7,23 +7,30 @@ sidebar_position: 1
 ## Software Setup
 
 1. Use the [Raspberry Pi Imager tool](https://www.raspberrypi.com/software/) to flash an SD card with the latest Raspberry Pi OS image
-    - Choose the ***Raspberry Pi OS Lite (32-bit) image***
-    - Click the gear icon ⚙ to also setup WiFi and enable SSH
+    - Choose OS - Raspberry Pi OS (other) - ***Raspberry Pi OS Lite (32-bit) image***
+    - Click the gear icon ⚙ to set up a new user, WiFi, and enable SSH
 
-2. SSH into the Pi and update the kernel and reboot
-```
-sudo apt-get update && sudo apt-get install raspberrypi-kernel
-```
-```
-sudo shutdown -r now
-```
+2. Flash the firmware to the Beepy device
 
-3. After reboot, SSH into the Pi again and run the setup script
+    - Download the [latest firmware image](https://github.com/sqfmi/i2c_puppet/releases/latest/download/i2c_puppet.uf2)
+    - Slide the power switch off (left if facing up)
+    - Connect the Beepy to your computer via USB-C
+    - While holding the "End Call" key (top right on the keypad), slide the power switch on
+    - The Beepy will present itself as a USB mass storage device, drag'n'drop the new firmware (\*.uf2) into the drive and it will reboot with the new firmware
+
+3. SSH into the Pi and install driver packages. The LED will remain green until drivers are installed and the system has rebooted
+
 ```
-curl -s https://raw.githubusercontent.com/beeper/beepy/main/raspberrypi/setup.sh | bash
+curl -s --compressed "https://ardangelo.github.io/beepy-ppa/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/beepy.gpg >/dev/null \
+&& sudo curl -s --compressed -o /etc/apt/sources.list.d/beepy.list "https://ardangelo.github.io/beepy-ppa/beepy.list" \
+&& sudo apt update \
+&& sudo apt-get -y install beepy-kbd sharp-drm \
+&& sudo shutdown -r now
 ```
 
 4. Your Beepy is now ready, enjoy!
+
+    - Review the [default symbol keymap](/docs/keyboard)
 
 ## Hardware Setup
 
@@ -34,20 +41,12 @@ If you are installing your own Raspberry Pi Zero W or any other SBC, make sure a
 
 The USB-C port at the bottom powers and charges the Beepy. **Do not power the Raspberry Pi Zero through its Micro-USB port (PWR IN).**
 
-## Firmware Update
-
-To update the Beepy's firmware:
-
-1. Slide the power switch off (left if facing up)
-2. Connect the Beepy to your computer via USB-C
-3. While holding the "End Call" key (top right on the keypad), slide the power switch on
-4. The Beepy will present itself as a USB mass storage device, drag'n'drop the new firmware (\*.uf2) into the drive and it will reboot with the new firmware
-
-The latest Beepy firmware can be found here: [**i2c_puppet.uf2**](https://github.com/sqfmi/i2c_puppet/releases/latest/download/i2c_puppet.uf2)
-
 ## Additional Details
 - In ```/boot/cmdline.txt```, edit ```fbcon=font:VGA8x8``` to change the font/size. See [fbcon](https://www.kernel.org/doc/Documentation/fb/fbcon.txt) for more details
-- Long holding the "End Call" key (~3 seconds) will trigger the key ```KEY_POWER``` and safely shutdown the Pi
+- Long holding the "End Call" key (5 seconds) will trigger the key ```KEY_POWER``` and safely shutdown the Pi
+    - The LED will turn red until OS shutdown has completed
+    - Wait another few seconds until the disk activity light has turned off to ensure disks are synced
+- After shutting down using the "End Call" key, holding the key for 1 second will turn the Pi back on
 
 ## Join the Beepy Discord!
 
