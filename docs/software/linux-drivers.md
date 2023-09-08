@@ -1,35 +1,45 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Linux Drivers
+# RGB LED
 
-Linux drivers for the Beepy
+The following sysfs entries are available under `/sys/firmware/beepy`:
 
-## Display
+- `led`: 0 to disable LED, 1 to enable. Write-only
+- `led_red`, `led_green`, `led_blue`: set LED color intensity from 0 to 255. Write- only
 
-[Sharp Memory LCD Kernel Drive](https://github.com/w4ilun/Sharp-Memory-LCD-Kernel-Driver)
+## RGB LED over I2C
 
-## Keyboard
+The RGB LED is connected to the RP2040. When the keyboard driver is unloaded via `rmmod beepy-kbd`, they can be controlled directly by the Pi via [I²C](https://en.wikipedia.org/wiki/I²C).
 
-[BBQX0KBD i2c Keyboard Device Driver](https://github.com/w4ilun/bbqX0kbd_driver)
+The LED color on the Beepy is exposed on I2C bus 1 at the chip address `0x1F`.
 
-### How to customize keyboard layout
+Controls are available at the following specific data addresses:
 
-To Do
+| Function | Read   | Write  |
+|----------|--------|--------|
+| Power    | `0x20` | `0xA0` |
+| Red      | `0x21` | `0xA1` |
+| Green    | `0x22` | `0xA2` |
+| Blue     | `0x23` | `0xA3` |
 
-## Peripherals
 
-To Do - This driver provides an interface to read/write to the peripherals on the Beepy
+To get/set the LED color on the Beepy, you can read/write to the above registers over I2C. The values are in the range of ```0x00``` - ```0xFF```.
 
-### Power Control
+*Note: write addresses are the read address masked with ```0x80```.*
 
-To Do - Controlling the power switch and detecting the shutdown signal
+A value of 0 in the power register represents the LED's off state, while any other value represents on.
 
-### Battery Level
+## Example
 
-To read battery level in userspace, see [Power Management & Battery](../firmware/power.md).
+To set the RGB values to red and turn the LED on from the command line:
 
-### RGB LED Control
-
-To control the front RGB LED in userspace, see [RGB LED](../firmware/rgb-led.md).
+```bash
+# Format:
+# i2cset -y [i2cbus] [chip-address] [data-address] value
+i2cset -y 1 0x1F 0xA1 0xFF
+i2cset -y 1 0x1F 0xA2 0x00
+i2cset -y 1 0x1F 0xA3 0x00
+i2cset -y 1 0x1F 0xA0 0xFF
+```

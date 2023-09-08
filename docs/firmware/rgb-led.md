@@ -4,7 +4,14 @@ sidebar_position: 3
 
 # RGB LED
 
-The RGB LED is connected to the RP2040 and can be controlled by the Pi via [I²C](https://en.wikipedia.org/wiki/I²C).
+The following sysfs entries are available under `/sys/firmware/beepy`:
+
+- `led`: 0 to disable LED, 1 to enable. Write-only
+- `led_red`, `led_green`, `led_blue`: set LED color intensity from 0 to 255. Write- only
+
+## RGB LED over I2C
+
+The RGB LED is connected to the RP2040. When the keyboard driver is unloaded via `rmmod beepy-kbd`, they can be controlled directly by the Pi via [I²C](https://en.wikipedia.org/wiki/I²C).
 
 The LED color on the Beepy is exposed on I2C bus 1 at the chip address `0x1F`.
 
