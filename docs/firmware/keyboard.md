@@ -47,8 +47,8 @@ Meta mode is a modal layer that assists in rapidly moving the cursor and scrolli
 - X: Apply Control to next key (dismisses Meta mode)
 - C: Apply Alt to next key (dismisses Meta mode)
 - 0: Toggle display black/white inversion
-- N: Decrease keyboard brightness
-- M: Increase keyboard brightness
+- N: Decrease keyboard backlight brightness
+- M: Increase keyboard backlight brightness
 - $: Toggle keyboard backlight
 - Touchpad click (while in Meta mode): Enable touchpad scroll mode (up and down arrrow keys)
    - Other Meta mode keys will continue to work as normal

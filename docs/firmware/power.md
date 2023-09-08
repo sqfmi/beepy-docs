@@ -6,6 +6,8 @@ sidebar_position: 2
 
 The onboard RP2040 controls the power to the Pi, as well as measuring the battery level with its ADC. The Beepy can be safely shutdown by holding the "End Call" button on the keyboard.
 
+To battery voltage on the Beepy can read from the register ```0x17``` over I2C. This is a read-only register, it is 2 bytes in size. It returns a 16 bit value from the ADC (VREF = 3.3V). There is a voltage divider so the battery voltage can be calculated as VBAT = 3.3V * (value/4095) * 2.
+
 ## Examples
 
 ### Battery Level Reporting
