@@ -6,30 +6,29 @@ sidebar_position: 2
 
 Linux drivers for the Beepy
 
-## Display
+## APT repository
 
-[Sharp Memory LCD Kernel Drive](https://github.com/w4ilun/Sharp-Memory-LCD-Kernel-Driver)
+To add the driver APT repository and install Beepy drivers, run
 
-## Keyboard
-
-[BBQX0KBD i2c Keyboard Device Driver](https://github.com/w4ilun/bbqX0kbd_driver)
-
-### How to customize keyboard layout
-
-To Do
+```
+curl -s --compressed "https://ardangelo.github.io/beepy-ppa/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/beepy.gpg >/dev/null \
+&& sudo curl -s --compressed -o /etc/apt/sources.list.d/beepy.list "https://ardangelo.github.io/beepy-ppa/beepy.list" \
+&& sudo apt update \
+&& sudo apt-get -y install beepy-kbd sharp-drm \
+&& sudo shutdown -r now
+```
 
 ## Peripherals
 
 To Do - This driver provides an interface to read/write to the peripherals on the Beepy
 
-### Power Control
+### Battery Level and LED control
 
-To Do - Controlling the power switch and detecting the shutdown signal
+The following sysfs entries are available under `/sys/firmware/beepy`:
 
-### Battery Level
-
-To Do - Reading from the ADC on the RP2040
-
-### RGB LED Control
-
-To Do - LED control via userspace application
+- `led`: 0 to disable LED, 1 to enable. Write-only
+- `led_red`, `led_green`, `led_blue`: set LED color intensity from 0 to 255. Write- only
+- `keyboard_backlight`: set keyboard brightness from 0 to 255. Write-only
+- `battery_raw`: raw numerical battery level as reported by firmware. Read-only
+- `battery_volts`: battery voltage estimation. Read-only
+- `battery_percent`: battery percentage estimation. Read-only
