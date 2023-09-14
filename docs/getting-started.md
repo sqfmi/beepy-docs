@@ -31,24 +31,28 @@ There are two supported choices of operating system to run on your Beepy:
 
 ## Setting up a Buildroot System
 
-Buildroot is automatically set up with Beepy device drivers and a set of useful software, compatible with the Raspberry Pi Zero 2 W. Tailored for on-the-go communication, it ships with the following applications:
+Buildroot is a slimmed-down, Beepy-centric image with a fast boot, compatible with the Raspberry Pi Zero 2 W. It is automatically set up with Beepy device drivers and a set of useful software. Tailored for on-the-go communication, it ships with the following applications:
 
 * `gomuks` - Beeper command line client
 * `mosh` - Mobile remote shell
 * `w3m` - Text based browser
 * `aerc` - Command line email client
-* `nmtui` - Network configuration
+* `nmtui` - Network management
 * Python 3
 
 To use the Beepy Buildroot image, download and flash the latest release here:
 
 https://github.com/ardangelo/beepberry-buildroot/releases
 
-To configure a Wi-Fi network, open the boot partition on your PC and rename the file `wlan/ssid_goes_here.psk` to `wlan/<your_network_name>.psk` and edit its contents, replacing `passphrase_goes_here` with the network passphrase.
+### Configuring Buildroot
 
-The file `timezone.txt` on the boot partition can be edited to change the device timezone. When a network is connected, time will automatically synchronize with time servers.
+The file `timezone.txt` on the SD card's boot partition can be edited to change the device timezone. When a network is connected, time will automatically synchronize with time servers.
+
+To configure a Wi-Fi network, use the `nmtui` utility after booting. You can also open the SD card's boot partition on your PC and rename the file `wlan/ssid_goes_here.psk` to `wlan/<your_network_name>.psk` and edit its contents, replacing `passphrase_goes_here` with the network passphrase.
 
 The initial boot will take about 30 seconds to resize disk partitions to fill your SD card. Subsequent boots take around 8 seconds from power-on to Tmux.
+
+When a new Buildroot release is posted, you can update by reflashing the SD card, or by running the command `sudo update_buildroot` to pull the latest changes from the release image.
 
 Review the [default symbol keymap](/docs/keyboard)
 
