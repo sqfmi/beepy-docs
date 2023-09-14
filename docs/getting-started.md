@@ -88,6 +88,12 @@ After shutting down using the "End Call" key, holding the key for 1 second will 
 
 In ```/boot/cmdline.txt```, edit ```fbcon=font:VGA8x8``` to change the font/size. The next largest size is `VGA8x16`. See [fbcon](https://www.kernel.org/doc/Documentation/fb/fbcon.txt) for more details.
 
+## Additional Details
+- In ```/boot/cmdline.txt```, edit ```fbcon=font:VGA8x8``` to change the font/size. See [fbcon](https://www.kernel.org/doc/Documentation/fb/fbcon.txt) for more details
+- Long holding the "End Call" key (5 seconds) will trigger the key ```KEY_POWER``` and safely shutdown the Pi
+    - The LED will turn red until OS shutdown has completed
+    - Wait another few seconds until the disk activity light on the Pi has turned off to ensure disks are synced
+- After shutting down using the "End Call" key, holding the key for 1 second will turn the Pi back on
 
 ## Join the Beepy Discord!
 

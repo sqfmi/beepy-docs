@@ -1,34 +1,45 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Linux Drivers
-
-Linux drivers for the Beepy
-
-## APT repository
-
-To add the driver APT repository and install Beepy drivers, run
-
-```
-curl -s --compressed "https://ardangelo.github.io/beepy-ppa/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/beepy.gpg >/dev/null \
-&& sudo curl -s --compressed -o /etc/apt/sources.list.d/beepy.list "https://ardangelo.github.io/beepy-ppa/beepy.list" \
-&& sudo apt update \
-&& sudo apt-get -y install beepy-kbd sharp-drm \
-&& sudo shutdown -r now
-```
-
-## Peripherals
-
-To Do - This driver provides an interface to read/write to the peripherals on the Beepy
-
-### Battery Level and LED control
+# RGB LED
 
 The following sysfs entries are available under `/sys/firmware/beepy`:
 
 - `led`: 0 to disable LED, 1 to enable. Write-only
 - `led_red`, `led_green`, `led_blue`: set LED color intensity from 0 to 255. Write- only
-- `keyboard_backlight`: set keyboard brightness from 0 to 255. Write-only
-- `battery_raw`: raw numerical battery level as reported by firmware. Read-only
-- `battery_volts`: battery voltage estimation. Read-only
-- `battery_percent`: battery percentage estimation. Read-only
+
+## RGB LED over I2C
+
+The RGB LED is connected to the RP2040. When the keyboard driver is unloaded via `rmmod beepy-kbd`, they can be controlled directly by the Pi via [I²C](https://en.wikipedia.org/wiki/I²C).
+
+The LED color on the Beepy is exposed on I2C bus 1 at the chip address `0x1F`.
+
+Controls are available at the following specific data addresses:
+
+| Function | Read   | Write  |
+|----------|--------|--------|
+| Power    | `0x20` | `0xA0` |
+| Red      | `0x21` | `0xA1` |
+| Green    | `0x22` | `0xA2` |
+| Blue     | `0x23` | `0xA3` |
+
+
+To get/set the LED color on the Beepy, you can read/write to the above registers over I2C. The values are in the range of ```0x00``` - ```0xFF```.
+
+*Note: write addresses are the read address masked with ```0x80```.*
+
+A value of 0 in the power register represents the LED's off state, while any other value represents on.
+
+## Example
+
+To set the RGB values to red and turn the LED on from the command line:
+
+```bash
+# Format:
+# i2cset -y [i2cbus] [chip-address] [data-address] value
+i2cset -y 1 0x1F 0xA1 0xFF
+i2cset -y 1 0x1F 0xA2 0x00
+i2cset -y 1 0x1F 0xA3 0x00
+i2cset -y 1 0x1F 0xA0 0xFF
+```
