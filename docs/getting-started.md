@@ -26,35 +26,8 @@ The Beepy device firmware is updated to add new device features and capabilities
 
 There are two supported choices of operating system to run on your Beepy:
 
-- Buildroot: a slimmed-down, Beepy-centric image with a fast boot
 - Raspbian: a powerful, customizable distribution with all the bells and whistles
-
-## Setting up a Buildroot System
-
-Buildroot is a slimmed-down, Beepy-centric image with a fast boot, compatible with the Raspberry Pi Zero 2 W. It is automatically set up with Beepy device drivers and a set of useful software. Tailored for on-the-go communication, it ships with the following applications:
-
-* `gomuks` - Beeper command line client
-* `mosh` - Mobile remote shell
-* `w3m` - Text based browser
-* `aerc` - Command line email client
-* `nmtui` - Network management
-* Python 3
-
-To use the Beepy Buildroot image, download and flash the latest release here:
-
-https://github.com/ardangelo/beepberry-buildroot/releases
-
-### Configuring Buildroot
-
-The file `timezone.txt` on the SD card's boot partition can be edited to change the device timezone. When a network is connected, time will automatically synchronize with time servers.
-
-To configure a Wi-Fi network, use the `nmtui` utility after booting. You can also open the SD card's boot partition on your PC and rename the file `wlan/ssid_goes_here.psk` to `wlan/<your_network_name>.psk` and edit its contents, replacing `passphrase_goes_here` with the network passphrase.
-
-The initial boot will take about 30 seconds to resize disk partitions to fill your SD card. Subsequent boots take around 8 seconds from power-on to Tmux.
-
-When a new Buildroot release is posted, you can update by reflashing the SD card, or by running the command `sudo update_buildroot` to pull the latest changes from the release image.
-
-Review the [default symbol keymap](/docs/keyboard)
+- Buildroot: a slimmed-down, Beepy-centric image with a fast boot
 
 ## Setting up a Raspbian System
 
@@ -75,6 +48,29 @@ curl -s --compressed "https://ardangelo.github.io/beepy-ppa/KEY.gpg" | gpg --dea
 3. Your Beepy with Raspbian is now ready, enjoy!
 
     - Review the [default symbol keymap](/docs/keyboard)
+
+## Setting up a Buildroot System
+
+Buildroot is a slimmed-down, Beepy-centric image with a fast boot, compatible with the Raspberry Pi Zero 2 W. It is automatically set up with Beepy device drivers and a set of useful software. Tailored for on-the-go communication, it ships with the following applications:
+
+* `gomuks` - Beeper command line client
+* `mosh` - Mobile remote shell
+* `w3m` - Text based browser
+* `aerc` - Command line email client
+* `nmtui` - Network management
+* Python 3
+
+To use the Beepy Buildroot image, download and flash the latest release here:
+
+https://github.com/ardangelo/beepberry-buildroot/releases
+
+The initial boot will take about 30 seconds to resize disk partitions to fill your SD card. Subsequent boots take around 8 seconds from power-on to Tmux.
+
+* Configure timezone: edit `/boot/timezone.txt`
+* Configure Wi-Fi: use `nmtui` or edit `/boot/wlan/<your_network_name>.psk`
+* Updating Buildroot image: reflash SD card, or run `sudo update_buildroot`
+
+Review the [default symbol keymap](/docs/keyboard)
 
 ## Powering off your Beepy
 
