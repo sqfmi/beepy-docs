@@ -22,6 +22,19 @@ sidebar_position: 1
 
 > Note: Without the drivers installed, the display of the Beepy will not work (a static like image may be visible).
 
+First you'll need to determine the IP address of your Beepy.
+Since the screen will not work until the drivers are installed, you may infer the IP address of your device by following either of these steps:
+1. Opening your Router's network configuration webpage and looking for the IP address of a device with login name given during Step 1.
+2. On a Unix-based desktop connected to the same WIFI network as the Beepy, run a network scan using the command `sudo arp-scan --localnet`. This will list IP addresses of all devices in your local network. From this list, you may identify the address corresponding to your Beepy.
+
+Once you have the IP address, SSH into the Beepy with
+```bash
+ssh <USER>@<IP-ADDRESS>
+```
+where `USER` is the login name created for your Beepy during Step 1 and `IP-ADDRESS` is the IP address of your Beepy.
+
+Finally, install the necessary drivers.
+
 ```
 curl -s --compressed "https://ardangelo.github.io/beepy-ppa/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/beepy.gpg >/dev/null \
 && sudo curl -s --compressed -o /etc/apt/sources.list.d/beepy.list "https://ardangelo.github.io/beepy-ppa/beepy.list" \
