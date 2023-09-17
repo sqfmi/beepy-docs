@@ -20,6 +20,8 @@ sidebar_position: 1
 
 3. SSH into the Pi and install driver packages. The LED will remain green until drivers are installed and the system has rebooted
 
+> Note: Without the drivers installed, the display of the Beepy will not work (a static like image may be visible).
+
 ```
 curl -s --compressed "https://ardangelo.github.io/beepy-ppa/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/beepy.gpg >/dev/null \
 && sudo curl -s --compressed -o /etc/apt/sources.list.d/beepy.list "https://ardangelo.github.io/beepy-ppa/beepy.list" \
@@ -61,4 +63,3 @@ The USB-C port at the bottom powers and charges the Beepy. **Do not power the Ra
 [**#beepy-apps**](https://matrix.to/#/#beepberry-apps:beeper.com)
 
 [**#beepy-hw**](https://matrix.to/#/#beepberry-hw:beeper.com)
-
