@@ -30,7 +30,7 @@ curl -s --compressed "https://ardangelo.github.io/beepy-ppa/KEY.gpg" | gpg --dea
 
 4. Your Beepy is now ready, enjoy!
 
-    - Review the [default symbol keymap](/docs/keyboard)
+    - Review the [default symbol keymap](https://beepy.sqfmi.com/img/symbol-keys.png) 
 
 ## Hardware Setup
 
