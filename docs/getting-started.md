@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Getting Started
 
-Follow the steps to setup your Beepy. Out of the box, the display will only show static. If you see yellow lines on the display, **it is the screen protector** and can be removed.
+Follow these steps to setup your Beepy. Out of the box, the display will only show static. If you see yellow lines on the display, ***that is the screen protector*** and can be removed.
 
 ## Software Setup
 
