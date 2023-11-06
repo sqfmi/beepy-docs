@@ -4,11 +4,14 @@ sidebar_position: 1
 
 # Getting Started
 
+Follow the steps to setup your Beepy. Out of the box, the display will only show static. If you see yellow lines on the display, **it is the screen protector** and can be removed.
+
 ## Software Setup
 
-1. Use the [Raspberry Pi Imager tool](https://www.raspberrypi.com/software/) to flash an SD card with the latest Raspberry Pi OS image
+1. Use the [Raspberry Pi Imager tool](https://www.raspberrypi.com/software/) to flash an SD card with the Raspberry Pi OS Lite image
     - Choose OS - Raspberry Pi OS (other) - ***Raspberry Pi OS Lite (32-bit) image***
-    - Click the gear icon ⚙ to set up a new user, WiFi, and enable SSH
+    - Click the gear icon ⚙ (or press ```CTRL + SHIFT + X```) to set the username, password, hostname, WiFi, and enable SSH
+    - Make sure your computer and the Pi are on the same WiFi network in order to SSH in later
 
 2. Update Beepy's firmware
 
@@ -17,8 +20,18 @@ sidebar_position: 1
     - Connect the Beepy to your computer via USB-C
     - While holding the "End Call" key (top right on the keypad), slide the power switch on
     - The Beepy will present itself as a USB mass storage device, drag'n'drop the new firmware (i2c_puppet.uf2) into the drive and it will reboot with the new firmware
+    - Note: The LED will remain green until driver packages below are installed and the system has rebooted
 
-3. SSH into the Pi and install driver packages. The LED will remain green until drivers are installed and the system has rebooted
+3. SSH into your Beepy and install the driver packages
+   
+    ```bash
+    ssh <USER>@<HOST>
+    ```
+    where `USER` is the username name created during Step 1, and `HOST` is the hostname (e.g. beepy.local) or the IP address of your Beepy
+    - To get the IP address of your Beepy, you can:
+        - Check your router's config page for the list of connected device and look for the IP address
+        - Run a network scan using the command `sudo arp-scan --localnet`. This will list IP addresses of all devices in your local network
+    - Once you SSH in, proceed with installing the packages using the following commands:
 
 ```
 curl -s --compressed "https://ardangelo.github.io/beepy-ppa/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/beepy.gpg >/dev/null \
@@ -61,4 +74,3 @@ The USB-C port at the bottom powers and charges the Beepy. **Do not power the Ra
 [**#beepy-apps**](https://matrix.to/#/#beepberry-apps:beeper.com)
 
 [**#beepy-hw**](https://matrix.to/#/#beepberry-hw:beeper.com)
-
