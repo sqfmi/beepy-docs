@@ -43,3 +43,17 @@ The Pi Zero W only supports 2.4GHz WiFi networks. Make sure you're not trying to
 ### I prefer a white background with black text
 
 You can invert the display mode by running `echo 1 | sudo tee /sys/module/sharp_drm/parameters/mono_invert`
+
+### My display contrast is too low
+
+You can modify the display constrast by changing the value in `/sys/module/sharp_drm/parameters/mono_cutoff` - the default is 32.
+
+If this is your first time booting up and you see a mostly blank screen with a vague raspberry shape in the top left and some scattered patches of black towards the middle then your image is probably set to boot into the desktop environment. You can make the desktop more legible by setting a `mono_cutoff` of `195` or disable it through `raspi-config`.
+
+### How can I found the IP address of Beepy on my network?
+
+You can check your router's config page for the list of connected device and look for the IP address
+
+-or-
+
+Run a network scan using the command `sudo arp-scan --localnet`. This will list IP addresses of all devices in your local network
