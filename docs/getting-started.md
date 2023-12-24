@@ -32,7 +32,7 @@ There are two choices of operating systems to run on your Beepy
 - Raspbian: a powerful, customizable distribution with all the bells and whistles
 - Buildroot: a slimmed-down, Beepy-centric image with a fast boot
 
-## Setting up a Raspbian System
+### Setting up a Raspbian System
 
 1. Use the [Raspberry Pi Imager tool](https://www.raspberrypi.com/software/) to flash an SD card with the Raspberry Pi OS ***Lite*** image
     - Choose OS - Raspberry Pi OS (other) - ***Raspberry Pi OS Lite (32-bit) image***
@@ -53,7 +53,7 @@ There are two choices of operating systems to run on your Beepy
 
     - Review the [default symbol keymap](https://beepy.sqfmi.com/img/symbol-keys.png) 
 
-## Setting up a Buildroot System
+### Setting up a Buildroot System
 
 Buildroot is a slimmed-down, Beepy-centric image with a fast boot, compatible with the Raspberry Pi Zero 2 W. It is automatically set up with Beepy device drivers and a set of useful software. Tailored for on-the-go communication, it ships with the following applications:
 
