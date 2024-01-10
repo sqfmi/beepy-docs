@@ -50,7 +50,7 @@ You can modify the display constrast by changing the value in `/sys/module/sharp
 
 If this is your first time booting up and you see a mostly blank screen with a vague raspberry shape in the top left and some scattered patches of black towards the middle then your image is probably set to boot into the desktop environment. You can make the desktop more legible by setting a `mono_cutoff` of `195` or disable it through `raspi-config`.
 
-### How can I found the IP address of Beepy on my network?
+### How do I find out the IP address of Beepy on my network?
 
 You can check your router's config page for the list of connected device and look for the IP address
 
